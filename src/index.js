@@ -1,8 +1,8 @@
 import _ from 'lodash';
-import './style.css';
-import loadHome from './pages/home';
-import loadMenu from './pages/menu';
-import loadAbout from './pages/about';
+import 'style.css';
+import loadHome from './home.html';
+import loadMenu from './menu.html';
+import loadAbout from './abouthtml';
 
 function initPage() {
     const content = document.querySelector('#content');
@@ -22,7 +22,7 @@ function initPage() {
     aboutButton.addEventListener('click', loadAbout);
     content.appendChild(aboutButton);
 
-    loadHome();
+    initPage();
 }
 
 initPage();
