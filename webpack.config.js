@@ -14,8 +14,10 @@ module.exports = {
                 use: ['style-loader', 'css-loader'],
             },
             {
-                test: /\.(png|webp)$/,
-                use: ['file-loader',],
+                test: /\.webp$/,
+                use: [
+                    'file-loader',
+                ],
             },
         ],
     },
