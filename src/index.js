@@ -1,15 +1,13 @@
-import _ from 'lodash';
-import 'style.css';
-import loadHome from './home.html';
-import loadMenu from './menu.html';
-import loadAbout from './abouthtml';
+import '../src/style.css';
+import loadMenu from './menu.js';
+import loadAbout from './about.js';
 
 function initPage() {
-    const content = document.querySelector('#content');
+    const content = document.querySelector('#pageContent');
 
     const homeButton = document.createElement('button');
     homeButton.textContent = 'Home';
-    homeButton.addEventListener('click', loadHome);
+    homeButton.addEventListener('click', initPage);
     content.appendChild(homeButton);
 
     const menuButton = document.createElement('button');
