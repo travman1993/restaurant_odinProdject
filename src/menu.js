@@ -1,36 +1,18 @@
 import '../src/style.css';
 
 export function renderMenu() {
-    function topHeader() {
-        const header = document.createElement('header');
-        header.classList.add('top-header');
-        header.innerHTML = `
-            <div class="top-header-container">
-                <div class="top-header-name"><h1>Chuey's</h1></div>
-                <div class="top-header-menu">
-                    <button class="btn" onClick="topHeader()">Home</button>
-                    <button class="btn" onClick="renderMenu()">Menu</button>
-                    <button class="btn" onClick="renderAbout()">About</button>
-                </div>
-            </div>
+    const menu = document.createElement('div');
+    menu.classList.add('menu-container');
+    menu.innerHTML = `
+        <h2>Menu</h2>
+        <div class="menu-items">
+            <img src="./seafooddrink.webp" alt="Drinks offered" class="menu-item">
+            <img src="./seafod.webp" alt="Menu one" class="menu-item">
+            <img src="./seafoodtwo.webp" alt="Menu two" class="menu-item">
+            <img src="./seafoodthree.webp" alt="Menu three" class="menu-item">
+        </div>
         `;
-        return header;
-    }
-    
-    document.body.appendChild(topHeader());
-    
-    function bottomFooter() {
-        const footer = document.createElement('footer');
-        footer.classList.add('bottom-header');
-        footer.innerHTML =`
-            <div clas="foot">
-                <p>&copy; 2021 Chuey's</p>
-                <a href="https://github.com/travman1993">GitHub: Travman</a>
-            </div>
-            `;
-        return footer;
-    }
-    
-    document.body.appendChild(bottomFooter());
-    
+    return menu;
 }
+
+renderMenu();

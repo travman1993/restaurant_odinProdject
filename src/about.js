@@ -1,37 +1,28 @@
 import '../src/style.css';
 
 export function renderAbout() {
-    function topHeader() {
-        const header = document.createElement('header');
-        header.classList.add('top-header');
-        header.innerHTML = `
-            <div class="top-header-container">
-                <div class="top-header-name"><h1>Chuey's</h1></div>
-                <div class="top-header-menu">
-                    <button class="btn" onClick="topHeader()">Home</button>
-                    <button class="btn" onClick="renderMenu()">Menu</button>
-                    <button class="btn" onClick="renderAbout()">About</button>
-                </div>
-            </div>
-        `;
-        return header;
-    }
-    
-    document.body.appendChild(topHeader());
-    
-    function bottomFooter() {
-        const footer = document.createElement('footer');
-        footer.classList.add('bottom-header');
-        footer.innerHTML =`
-            <div clas="foot">
-                <p>&copy; 2021 Chuey's</p>
-                <a href="https://github.com/travman1993">GitHub: Travman</a>
-            </div>
-            `;
-        return footer;
-    }
-    
-    document.body.appendChild(bottomFooter());
+    const about = document.createElement('div');
+    about.classList.add('about-container');
+    about.innerHTML = `
+        <h2>About Us</h2>
+        <img src="../person.webp" alt="Owner Chuey" class="about-item">
+        <p>Chuey's is a family owned and operated restaurant located in the heart of the city. We offer a wide variety of dishes that are sure to please your taste buds. Our menu includes a variety of appetizers, entrees, and desserts. We also offer a full bar with a wide selection of wines, beers, and cocktails. Whether you are looking for a quick bite to eat or a full meal, Chuey's has something for everyone. Come in and try our delicious food today!</p>
+        <h3>Tell Us About You!</h3>
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email">
+            <label for="message">Message:</label>
+            <textarea id="message" name="message"></textarea>
+            <input type="submit" value="Submit">
+        </form>
+        <h4>Contect Us</h4>
+        <p>Phone: 123-456-7890</p>
+        <p>Email: chuchuuu@shortstack.com</p>
+    `;
+    return about;  
 }
 
-// document.querySelector('button').addEventListener('click', renderAbout);
+renderAbout();
+
