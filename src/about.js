@@ -1,11 +1,13 @@
-import '../src/style.css';
+import './style.css';
+import personImg from './person.webp';
 
 export function renderAbout() {
+    const pageContent = document.querySelector('#pageContent');
     const about = document.createElement('div');
     about.classList.add('about-container');
     about.innerHTML = `
         <h2>About Us</h2>
-        <img src="../person.webp" alt="Owner Chuey" class="about-item">
+        <img src="${personImg}" alt="Owner Chuey" class="personImg">
         <p>Chuey's is a family owned and operated restaurant located in the heart of the city. We offer a wide variety of dishes that are sure to please your taste buds. Our menu includes a variety of appetizers, entrees, and desserts. We also offer a full bar with a wide selection of wines, beers, and cocktails. Whether you are looking for a quick bite to eat or a full meal, Chuey's has something for everyone. Come in and try our delicious food today!</p>
         <h3>Tell Us About You!</h3>
         <form>
@@ -21,8 +23,6 @@ export function renderAbout() {
         <p>Phone: 123-456-7890</p>
         <p>Email: chuchuuu@shortstack.com</p>
     `;
-    return about;  
+    pageContent.appendChild(about); 
 }
-
-renderAbout();
 

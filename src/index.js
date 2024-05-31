@@ -1,6 +1,7 @@
 import '../src/style.css';
-import { renderMenu } from './menu.js';
-import { renderAbout } from './about.js';
+import backgroundImage from './background.jpg'; 
+import {renderMenu} from './menu.js';
+import {renderAbout} from './about.js';
 
 document.addEventListener('DOMContentLoaded', function() {
     let currentContent = 'home';
@@ -13,8 +14,8 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function renderAboutContent() {
+        currentContent = 'about';
         mainArea.innerHTML = '';
-        currentContent = 'about'; 
         renderAbout();
     }
 
@@ -59,7 +60,7 @@ function mainContent() {
     mainArea.setAttribute('id', 'pageContent');
     mainArea.classList.add('main-container');
     mainArea.innerHTML = `
-        <img src="background.jpg" alt="Chuey's Restaurant" class="main-image" style="width: 100%; height: 120%;">
+        <img src="${backgroundImage}" alt="Background Image" class="mainImg">
         <div class="main-text">
             <h2>Welcome to Chuey's</h2>
             <p>Chuey's is a family owned and operated restaurant located in the heart of the city. We offer a wide variety of dishes that are sure to please your taste buds. Our menu includes a variety of appetizers, entrees, and desserts. We also offer a full bar with a wide selection of wines, beers, and cocktails. Whether you are looking for a quick bite to eat or a full meal, Chuey's has something for everyone. Come in and try our delicious food today!</p>
