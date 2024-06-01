@@ -9,7 +9,7 @@ export function renderMenu() {
     const menu = document.createElement('div');
     menu.classList.add('menu-container');
     menu.innerHTML = `
-        <h2>Menu</h2>
+        <h2 id="menuText">Menu</h2>
         <div class="menu-items">
             <img src="${menuImg1}" alt="Drinks offered" class="menu-item">
             <img src="${menuImg}" alt="Menu one" class="menu-item">

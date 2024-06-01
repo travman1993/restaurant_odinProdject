@@ -1,4 +1,4 @@
-import '../src/style.css';
+import './style.css';
 import backgroundImage from './background.jpg'; 
 import {renderMenu} from './menu.js';
 import {renderAbout} from './about.js';
@@ -60,10 +60,10 @@ function mainContent() {
     mainArea.setAttribute('id', 'pageContent');
     mainArea.classList.add('main-container');
     mainArea.innerHTML = `
-        <img src="${backgroundImage}" alt="Background Image" class="mainImg">
         <div class="main-text">
-            <h2>Welcome to Chuey's</h2>
-            <p>Chuey's is a family owned and operated restaurant located in the heart of the city. We offer a wide variety of dishes that are sure to please your taste buds. Our menu includes a variety of appetizers, entrees, and desserts. We also offer a full bar with a wide selection of wines, beers, and cocktails. Whether you are looking for a quick bite to eat or a full meal, Chuey's has something for everyone. Come in and try our delicious food today!</p>
+            <img src="${backgroundImage}" alt="Background Image" class="mainImg" style="width:100%;">
+            <div class="welcome"><h2>Welcome to Chuey's</h2></div>
+            <div class="pContent"><p>Chuey's is a family owned and operated restaurant located in the heart of the city. We offer a wide variety of dishes that are sure to please your taste buds. Our menu includes a variety of appetizers, entrees, and desserts. We also offer a full bar with a wide selection of wines, beers, and cocktails. Whether you are looking for a quick bite to eat or a full meal, Chuey's has something for everyone. Come in and try our delicious food today!</p></div>
         </div>
     `;
     return mainArea;
@@ -76,7 +76,7 @@ function bottomFooter() {
     footer.classList.add('bottom-header');
     footer.innerHTML =`
         <div class="foot">
-            <p>&copy; 2021 Chuey's</p>
+            <p class="copyText">&copy; 2021 Chuey's</p>
             <a href="https://github.com/travman1993">GitHub: Travman</a>
         </div>
         `;
