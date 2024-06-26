@@ -1,29 +1,24 @@
 {
-  "name": "restaurant_odinprodject",
+  "name": "restaurant-odinproject",
   "version": "1.0.0",
-  "description": "using java for everything except css in its own file",
+  "description": "using java for everything except css in its own file FAKE RESTURANT npm updated",
   "private": true,
-  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack",
-    "start": "webpack serve --open"
+    "watch": "webpack --watch",
+    "update": "git subtree push --prefix dist origin gh-pages",
+    "start": "webpack serve --open "
   },
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "ws": ">=8.17.1"
-  },
   "devDependencies": {
-    "ws": ">=8.17.1",
-    "css-loader": "^7.1.1",
+    "css-loader": "^6.9.0",
     "file-loader": "^6.2.0",
     "html-webpack-plugin": "^5.6.0",
-    "image-webpack-loader": "^8.1.0",
-    "style-loader": "^4.0.0",
-    "webpack": "^5.91.0",
+    "style-loader": "^3.3.4",
+    "webpack": "^5.89.0",
     "webpack-cli": "^5.1.4",
-    "webpack-dev-server": "^5.0.4"
-  },
-  "main": "webpack.config.js"
+    "webpack-dev-server": "^4.15.1"
+  }
 }
