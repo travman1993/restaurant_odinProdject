@@ -56,8 +56,7 @@ function topHeader() {
 }
 
 function mainContent() {
-    const mainArea = document.createElement('div');
-    mainArea.setAttribute('id', 'pageContent');
+    const mainArea = document.querySelector('#pageContent');
     mainArea.classList.add('main-container');
     mainArea.innerHTML = `
         <div class="main-text">
